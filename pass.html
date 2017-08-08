@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Введите паспорт</title>
+		<link rel="stylesheet" href="main.css">
+		<script defer src="calendar.js"></script>
+	</head>
+	<body>
+		<form action="#" method="post" onsubmit="ValidationForm()">
+			<div>
+				<label>Серия: <input name="series" id="series" type="text" size="4" maxlength="4" placeholder="Введите серию песпорта"></label>
+				<label>Номер: <input name="number" id="number" type="text" size="6" maxlength="6" placeholder="Введите номер паспорта"></label>
+			</div>
+			<div>
+				<label>Дата рождения:
+				<select name="birthdate_day" id="birthdate_day">
+				</select>
+				<select name="birthdate_month" id="birthdate_month" onchange = "setDays()">
+					<option value="1">01-январь</option>
+					<option value="2">02-февраль</option>
+					<option value="3">03-март</option>
+					<option value="4">04-апрель</option>
+					<option value="5">05-май</option>
+					<option value="6">06-июнь</option>
+					<option value="7">07-июль</option>
+					<option value="8">08-август</option>
+					<option value="9">09-сентябрь</option>
+					<option value="10">10-октябрь</option>
+					<option value="11">11-ноябрь</option>
+					<option value="12">12-декабрь</option>
+				</select>
+				<select name="birthdate_year" id="birthdate_year" onchange = "setDays()">
+				</select>
+			</div>
+			<div>
+				<input type="submit" value="Отправить" onclick="ValidationForm()" onsubmit="ValidationForm()">
+			</div>
+		</form>
+	</body>
+</html>
