@@ -80,11 +80,16 @@ onload	= function() {
 function ValidationForm() {
 	var result	= true;
 	var series	= document.getElementById('series');
-	var series_value	= series.value;
-//	if isNaN(series_value) {
-//		result	= false;
-//		series.style.backgroundColor = 'red';
-//	}
-//	var number_value	= document.getElementById('number').value;
+	var series_value	= parseInt(series.value);
+	if (isNaN(series_value)||String(series_value).length!=4) {
+		result	= false;
+		series.style.backgroundColor = 'red';
+	}
+	var number	= document.getElementById('number');
+	var number_value	= parseInt(number.value);
+	if (isNaN(number_value)||String(number_value).length!=6) {
+		result	= false;
+		number.style.backgroundColor = 'red';
+	}
 	return result;
 }

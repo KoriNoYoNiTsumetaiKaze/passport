@@ -7,7 +7,9 @@
 		<script defer src="calendar.js"></script>
 	</head>
 	<body>
-		<form action="#" method="post" onsubmit="ValidationForm()">
+		<form action="#" method="post" onsubmit="return ValidationForm()">
+			<div name="prompt" id="prompt">Введите номер и серию паспорта РФ:</div>
+			<div name="tip" id="tip">(4 цифры серия и 6 цифр номер)</div>
 			<div>
 				<label>Серия: <input name="series" id="series" type="text" size="4" maxlength="4" placeholder="Введите серию песпорта"></label>
 				<label>Номер: <input name="number" id="number" type="text" size="6" maxlength="6" placeholder="Введите номер паспорта"></label>
@@ -34,7 +36,7 @@
 				</select>
 			</div>
 			<div>
-				<input type="submit" value="Отправить" onclick="ValidationForm()" onsubmit="ValidationForm()">
+				<input type="submit" value="Отправить" onclick="return ValidationForm()" onsubmit="return ValidationForm()">
 			</div>
 		</form>
 	</body>

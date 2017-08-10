@@ -5,8 +5,19 @@ form {
 
 div {
 	margin: 10px auto;
+	text-align: center
 }
 
 label {
 	margin: 10px auto;
+}
+
+#prompt {
+	font-weight: bold;
+	margin: 0px auto;
+}
+
+#tip {
+	font-size: small;
+	margin: 0px auto;
 }
